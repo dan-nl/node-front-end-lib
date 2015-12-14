@@ -128,7 +128,7 @@ prefixes a given number with 0’s, or padding, if given, in order to satisfy th
 ```javascript
 @param {number} number
 @param {number} length
-@param {string} [padding]
+@param {string} [padding = '0']
 @returns {string}
 ```
 
