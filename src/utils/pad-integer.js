@@ -6,7 +6,7 @@
  * @public
  * @param {number} number
  * @param {number} length
- * @param {string} [padding]
+ * @param {string} [padding = '0']
  * @returns {string}
  */
 function padInteger( number, length, padding ) {
