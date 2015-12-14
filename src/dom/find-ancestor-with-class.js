@@ -13,10 +13,12 @@ var hasClass;
 hasClass = require( './has-class' );
 
 /**
+ * finds an html element ancestor, of the elm provided, that has the class name given
+ *
  * @public
- * @param {Object} elm
+ * @param {HTMLElement} elm
  * @param {string} class_name
- * @returns {*}
+ * @returns {HTMLElement|undefined}
  */
 function findAncestorWithClass( elm, class_name ) {
   var result;

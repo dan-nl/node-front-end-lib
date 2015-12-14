@@ -13,7 +13,7 @@ var ajax;
 var Promise;
 
 /**
- * variables assignemnts
+ * variables assignments
  */
 Promise = require( 'bluebird' );
 
@@ -26,14 +26,15 @@ ajax = {
   /**
    * @param {string} url
    *
-   * @param {undefined|Object} options
-   * @param {undefined|Function} options.abort
-   * @param {undefined|Function} options.onreadystatechange
-   * @param {undefined|Function} options.ontimeout
-   * @param {undefined|Function} options.progress
-   * @param {undefined|number} options.timeout
+   * @param {Object} [options]
+   * @param {Function} [options.abort]
+   * @param {string} [options.content-type = application/x-www-form-urlencoded]
+   * @param {Function} [options.onreadystatechange]
+   * @param {Function} [options.ontimeout]
+   * @param {Function} [options.progress]
+   * @param {number} [options.timeout = 7000] in milliseconds
    *
-   * @returns {undefined|Promise}
+   * @returns {Promise|undefined}
    */
   get: function ( url, options ) {
     var xhr;
@@ -59,15 +60,16 @@ ajax = {
   /**
    * @param {string} url
    *
-   * @param {undefined|Object} options
-   * @param {undefined|Function} options.abort
-   * @param {undefined|string|Object} options.data
-   * @param {undefined|Function} options.onreadystatechange
-   * @param {undefined|Function} options.ontimeout
-   * @param {undefined|Function} options.progress
-   * @param {undefined|number} options.timeout
+   * @param {Object} [options]
+   * @param {Function} [options.abort]
+   * @param {string} [options.content-type = application/x-www-form-urlencoded]
+   * @param {string|Object} [options.data]
+   * @param {Function} [options.onreadystatechange]
+   * @param {Function} [options.ontimeout]
+   * @param {Function} [options.progress]
+   * @param {number} [options.timeout] in milliseconds
    *
-   * @returns {undefined|Promise}
+   * @returns {Promise|undefined}
    */
   post: function post( url, options ) {
     var xhr;
@@ -97,8 +99,10 @@ ajax = {
 
   /**
    * must be set after open, but before send
-   * @param xhr
-   * @param options
+   *
+   * @param {XMLHttpRequest} xhr
+   * @param {Object} [options]
+   * @param {string} [options.content-type = application/x-www-form-urlencoded]
    */
   setRequestHeaders: function setRequestHeaders( xhr, options ) {
     if ( options && options['content-type'] ) {
@@ -115,12 +119,12 @@ ajax = {
   /**
    * @param {string} url
    *
-   * @param {undefined|Object} options
-   * @param {undefined|Function} options.abort
-   * @param {undefined|Function} options.onreadystatechange
-   * @param {undefined|Function} options.ontimeout
-   * @param {undefined|Function} options.progress
-   * @param {undefined|number} options.timeout
+   * @param {Object} [options]
+   * @param {Function} [options.abort]
+   * @param {Function} [options.onreadystatechange]
+   * @param {Function} [options.ontimeout]
+   * @param {Function} [options.progress]
+   * @param {number} [options.timeout = 7000] in milliseconds
    *
    * @param {Function} resolve
    * @param {Function} reject

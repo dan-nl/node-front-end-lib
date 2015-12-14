@@ -1,7 +1,7 @@
 {
-  "name": "node-js-lib",
+  "name": "node-front-end-lib",
   "version": "1.0.0",
-  "description": "front-end js library for web browsers",
+  "description": "front-end js library",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node ./spec/"

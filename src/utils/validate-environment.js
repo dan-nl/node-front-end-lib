@@ -77,6 +77,8 @@ function checkHtmlElements() {
 }
 
 /**
+ * returns whether or not the front-end environment meets the validations in the method.
+ *
  * @public
  * @returns {boolean}
  */

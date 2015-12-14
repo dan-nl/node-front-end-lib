@@ -7,11 +7,12 @@
 var elm_original;
 
 /**
- * findAncestorWithTagName
+ * finds an html element ancestor, of the elm provided, that has the tag name given
+ *
  * @public
- * @param {Object} elm
+ * @param {HTMLElement} elm
  * @param {string} tag_name
- * @returns {*}
+ * @returns {HTMLElement|undefined}
  */
 function findAncestorWithTagName( elm, tag_name ) {
   var result;

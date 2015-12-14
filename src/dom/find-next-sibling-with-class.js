@@ -13,12 +13,12 @@ var hasClass;
 hasClass = require( './has-class' );
 
 /**
- * findNextSiblingWithClass
+ * finds an html element sibling, of the elm provided, that has the class name given
  *
- * @private
- * @param {Object} elm
+ * @public
+ * @param {HTMLElement} elm
  * @param {string} class_name
- * @returns {*}
+ * @returns {HTMLElement|undefined}
  */
 function findNextSiblingWithClass( elm, class_name ) {
   var result;

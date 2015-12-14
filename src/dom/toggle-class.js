@@ -16,8 +16,10 @@ hasClass = require( './has-class' );
 removeClass = require( './remove-class' );
 
 /**
+ * toggles the class given, removes it if it exists, or adds it if it doesn’t exist, on the elm provided, with an optional callback called after the operation has completed
+ *
  * @public
- * @param {Object} elm
+ * @param {HTMLElement} elm
  * @param {string} class_name
  * @param {Function|undefined} callback
  */

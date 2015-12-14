@@ -1,9 +1,11 @@
 'use strict';
 
 /**
+ * returns the ClientRect of the elm provided
+ *
  * @public
- * @param {Object} elm
- * @returns {ClientRect|*}
+ * @param {HTMLElement} elm
+ * @returns {ClientRect|undefined}
  */
 function getBoundingClientRect( elm ) {
   var clone;

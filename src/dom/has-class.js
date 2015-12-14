@@ -1,10 +1,12 @@
 'use strict';
 
 /**
+ * returns whether or not the given elm has the class name provided
+ *
  * @public
- * @param {Object} elm
+ * @param {HTMLElement} elm
  * @param {string} class_name
- * @returns {*}
+ * @returns {boolean|undefined}
  */
 function hasClass( elm, class_name ) {
   // validations

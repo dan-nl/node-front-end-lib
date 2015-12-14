@@ -24,10 +24,12 @@ function fallbackScrollIntoView( elm ) {
 }
 
 /**
+ * scrolls the browser viewport vertically to the elm provided
+ *
  * @public
- * @param {Object} elm
- * @param duration
- * @param callback
+ * @param {HTMLElement} elm
+ * @param {number} [duration]
+ * @param {Function} [callback]
  */
 function scrollToY( elm, duration, callback ) {
   var count;

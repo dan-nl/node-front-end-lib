@@ -12,9 +12,11 @@ var getBoundingClientRect;
 getBoundingClientRect = require( './get-bounding-client-rect' );
 
 /**
+ * returns the height, in pixels, of the elm provided. remember to add the string 'px' to the value returned when using it in a `elm.style.x =` statement
+ *
  * @public
- * @param {Object} elm
- * @returns {undefined|number}
+ * @param {HTMLElement} elm
+ * @returns {number|undefined}
  */
 function getElementHeight( elm ) {
   var bounding_client_rect;

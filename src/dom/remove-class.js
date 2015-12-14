@@ -1,8 +1,10 @@
 'use strict';
 
 /**
+ * removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
+ *
  * @public
- * @param elm
+ * @param {HTMLElement} elm
  * @param {string|Array} class_name
  * @param {Function|undefined} callback
  */

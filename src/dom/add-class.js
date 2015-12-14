@@ -12,12 +12,12 @@ var hasClass;
 hasClass = require( './has-class' );
 
 /**
- * addClass
+ * adds the class, or classes, given, to the elm provided, with an optional callback called after the operation has completed
  *
- * @private
- * @param {Object} elm
+ * @public
+ * @param {HTMLElement} elm
  * @param {string|Array} class_name
- * @param {Function|undefined} callback
+ * @param {Function} [callback]
  */
 function addClass( elm, class_name, callback ) {
   var i;

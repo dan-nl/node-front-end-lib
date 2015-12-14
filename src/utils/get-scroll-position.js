@@ -1,8 +1,9 @@
 'use strict';
 
 /**
- * returns the current scroll position
+ * returns the viewport’s current scroll position
  *
+ * @public
  * @returns {{x: number, y: number}}
  */
 function getScrollPosition() {
