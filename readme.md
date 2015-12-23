@@ -137,3 +137,9 @@ returns whether or not the front-end environment meets the validations in the me
 ```javascript
 @returns {boolean}
 ```
+
+### whichTransitionEndEvent()
+returns the transitionend event listener name that can be used in the current environment.
+```javascript
+@returns {string|undefined}
+```

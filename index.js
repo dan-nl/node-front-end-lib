@@ -8,9 +8,10 @@ lib = {};
 lib.padInteger = require( './src/utils/pad-integer' );
 lib.getScrollPosition = require( './src/utils/get-scroll-position' );
 lib.validateEnvironment = require( './src/utils/validate-environment' );
+lib.whichTransitionEndEvent = require( './src/utils/which-transition-end-event' );
 
 // dom
-lib.addClass = require( './src/dom/add-class' );/**/
+lib.addClass = require( './src/dom/add-class' );
 lib.findAncestorWithClass = require( './src/dom/find-ancestor-with-class' );
 lib.findAncestorWithTagName = require( './src/dom/find-ancestor-with-tag-name' );
 lib.findNextSiblingWithClass = require( './src/dom/find-next-sibling-with-class' );
