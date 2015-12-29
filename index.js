@@ -25,6 +25,7 @@ lib.toggleClass = require( './src/dom/toggle-class' );
 
 // ajax
 lib.ajax = require( './src/ajax/ajax' );
+lib.extractXhrResponse = require( './src/ajax/extract-xhr-response' );
 
 // animations
 lib.scrollToY = require( './src/animations/scroll-to-y' );

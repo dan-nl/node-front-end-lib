@@ -29,6 +29,14 @@ front-end js library
 @returns {Promise|undefined}
 ```
 
+### extractXhrResponse( xhr )
+attempts to extract a response from an XMLHttpRequestProgressEvent
+```javascript
+@param {Object} xhr
+@throws {Error}
+@returns {string|undefined}
+```
+
 ## animations
 ### scrollToY( elm, duration, callback )
 scrolls the browser viewport vertically to the elm provided

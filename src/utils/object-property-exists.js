@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * tests whether or not an object property exists; does not search the object prototype.
  *
