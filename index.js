@@ -7,6 +7,7 @@ lib = {};
 // utils
 lib.padInteger = require( './src/utils/pad-integer' );
 lib.getScrollPosition = require( './src/utils/get-scroll-position' );
+lib.objectPropertyExists = require( './src/utils/object-property-exists' );
 lib.validateEnvironment = require( './src/utils/validate-environment' );
 lib.whichTransitionEndEvent = require( './src/utils/which-transition-end-event' );
 

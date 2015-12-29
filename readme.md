@@ -123,6 +123,17 @@ returns the viewport’s current scroll position
 @returns {x: number, y: number}
 ```
 
+### objectPropertyExists( obj )
+tests whether or not an object property exists; does not search the object prototype.
+```javascript
+@example
+objectPropertyExists( window, 'location', 'href' );
+
+@param {Object} obj
+@param {string} [property-name, property-name, ...]
+@returns {bool}
+```
+
 ### padInteger( number, length, padding )
 prefixes a given number with 0’s, or padding, if given, in order to satisfy the string length given
 ```javascript
