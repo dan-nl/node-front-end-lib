@@ -173,3 +173,9 @@ returns the transitionend event listener name that can be used in the current en
 ```javascript
 @returns {string|undefined}
 ```
+
+### windowResize( callback )
+registers the callback with a universal window onresize event listener, which is called via a debounce function that is set with a hard coded timeout of 400 milliseconds
+```javascript
+@param {Function} callback
+```

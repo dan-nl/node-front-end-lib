@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * https://github.com/jashkenas/underscore
  * https://davidwalsh.name/javascript-debounce-function
