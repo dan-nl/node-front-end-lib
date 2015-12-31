@@ -125,6 +125,17 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 
 ## utils
+### function debounce( func, wait, immediate )
+@see [https://davidwalsh.name/javascript-debounce-function](https://davidwalsh.name/javascript-debounce-function)
+
+returns a function, that, as long as it continues to be invoked, will not be triggered. the function will be called after it stops being called for N milliseconds. if `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
+```javascript
+@param {Function} func
+@param {number} wait
+@param {boolean} immediate
+@returns {Function}
+```
+
 ### function getScrollPosition()
 returns the viewport’s current scroll position
 ```javascript
