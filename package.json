@@ -4,13 +4,15 @@
   "description": "front-end js library",
   "main": "index.js",
   "scripts": {
+    "lint": "jshint .",
     "test": "jasmine-node ./spec/"
   },
   "keywords": [],
   "author": "dan entous <contact@pennlinepublishing.com>",
   "license": "MIT",
   "devDependencies": {
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "jshint": "^2.8.0"
   },
   "dependencies": {
     "bluebird": "^3.0.6"

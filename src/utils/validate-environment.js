@@ -48,6 +48,8 @@ function checkDocument() {
  * @returns {boolean}
  */
 function checkHtmlElements() {
+  /* global HTMLCollection */
+
   if ( !HTMLElement ) {
     console.error( 'checkHtmlElements(): environment does not know about HTMLElements' );
     return false;

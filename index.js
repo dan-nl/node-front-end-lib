@@ -1,13 +1,20 @@
 'use strict';
 
+/**
+ * module variables
+ */
 var lib;
 
+/**
+ * variable assignments
+ */
 lib = {};
 
 // utils
-lib.padInteger = require( './src/utils/pad-integer' );
+lib.debounce = require( './src/utils/debounce' );
 lib.getScrollPosition = require( './src/utils/get-scroll-position' );
 lib.objectPropertyExists = require( './src/utils/object-property-exists' );
+lib.padInteger = require( './src/utils/pad-integer' );
 lib.validateEnvironment = require( './src/utils/validate-environment' );
 lib.whichTransitionEndEvent = require( './src/utils/which-transition-end-event' );
 
