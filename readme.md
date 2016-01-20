@@ -126,7 +126,7 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 
 ## utils
-### function debounce( func, wait, immediate )
+### debounce( func, wait, immediate )
 @see [https://davidwalsh.name/javascript-debounce-function](https://davidwalsh.name/javascript-debounce-function)
 
 returns a function, that, as long as it continues to be invoked, will not be triggered. the function will be called after it stops being called for N milliseconds. if `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
@@ -137,7 +137,7 @@ returns a function, that, as long as it continues to be invoked, will not be tri
 @returns {Function}
 ```
 
-### function getScrollPosition()
+### getScrollPosition()
 returns the viewport’s current scroll position
 ```javascript
 @returns {x: number, y: number}
@@ -162,6 +162,16 @@ prefixes a given number with 0’s, or padding, if given, in order to satisfy th
 @param {string} [padding = '0']
 @returns {string}
 ```
+
+### preventBackspace()
+prevents the backspace key from triggering a history back call to the browser. allows the backspace key to be used in form input fields with the type:
+* email
+* password
+* search
+* tel
+* text
+* textarea
+* url
 
 ### validateEnvironment()
 returns whether or not the front-end environment meets the validations in the method.
