@@ -3,13 +3,13 @@
 /**
  * prefixes a given number with 0’s, or padding, if given, in order to satisfy the string length given
  *
- * @public
  * @param {number} number
  * @param {number} length
  * @param {string} [padding = '0']
+ *
  * @returns {string}
  */
-function padInteger( number, length, padding ) {
+module.exports = function padInteger( number, length, padding ) {
   var result;
 
   result = '';
@@ -29,7 +29,7 @@ function padInteger( number, length, padding ) {
     return result;
   }
 
-  padding = padding || 0;
+  padding = padding || '0';
   result += number;
 
   while ( result.length < length ) {
@@ -37,6 +37,4 @@ function padInteger( number, length, padding ) {
   }
 
   return result;
-}
-
-module.exports = padInteger;
+};

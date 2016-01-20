@@ -38,11 +38,12 @@ attempts to extract a response from an XMLHttpRequestProgressEvent
 ```
 
 ## animations
-### scrollToY( elm, duration, callback )
+### scrollToY( elm, duration, offset, callback )
 scrolls the browser viewport vertically to the elm provided
 ```javascript
 @param {HTMLElement} elm
 @param {number} [duration = 500] in milliseconds
+@param {number} [offset]
 @param {Function} [callback]
 ```
 

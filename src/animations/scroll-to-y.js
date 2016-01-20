@@ -29,9 +29,10 @@ function fallbackScrollIntoView( elm ) {
  * @public
  * @param {HTMLElement} elm
  * @param {number} [duration]
+ * @param {number} [offset]
  * @param {Function} [callback]
  */
-function scrollToY( elm, duration, callback ) {
+function scrollToY( elm, duration, offset, callback ) {
   var count;
   var diff_from_current_y;
   var next_position;
@@ -75,7 +76,11 @@ function scrollToY( elm, duration, callback ) {
     duration = 500;
   }
 
-  scroll_to_y = window.pageYOffset + Math.floor( elm.getBoundingClientRect().top );
+  if ( typeof offset !== 'number' || isNaN( offset ) ) {
+    offset = 0;
+  }
+
+  scroll_to_y = window.pageYOffset + Math.floor( elm.getBoundingClientRect().top ) + offset;
   diff_from_current_y = scroll_to_y - scroll_position.y;
   scroll_step = Math.PI / ( duration / 10 );
 
