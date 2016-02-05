@@ -79,6 +79,30 @@ finds an html element sibling, of the elm provided, that has the class name give
 @returns {HTMLElement|undefined}
 ```
 
+### findNextSiblingWithTagName( elm, tag_name )
+finds an html element sibling, of the elm provided, that has the tag name given
+```javascript
+@param {HTMLElement} elm
+@param {string} tag_name
+@returns {HTMLElement|undefined}
+```
+
+### findPreviousSiblingWithClass( elm, class_name )
+finds an html element sibling, of the elm provided, that has the class name given
+```javascript
+@param {HTMLElement} elm
+@param {string} class_name
+@returns {HTMLElement|undefined}
+```
+
+### findPreviousSiblingWithTagName( elm, tag_name )
+finds an html element sibling, of the elm provided, that has the tag name given
+```javascript
+@param {HTMLElement} elm
+@param {string} tag_name
+@returns {HTMLElement|undefined}
+```
+
 ### getBoundingClientRect( elm )
 returns the ClientRect of the elm provided
 ```javascript
