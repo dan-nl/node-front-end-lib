@@ -12,6 +12,11 @@ function handleKeydown( evt ) {
   }
 
   src_element = evt.srcElement || evt.target;
+
+  if ( !src_element.type ) {
+    return;
+  }
+
   tag_type = src_element.type.toUpperCase();
 
   // tag types that allow backspace; anything else falls to the default
