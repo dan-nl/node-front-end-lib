@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var addClass;
 var hasClass;
@@ -16,14 +15,14 @@ hasClass = require( './has-class' );
 removeClass = require( './remove-class' );
 
 /**
- * toggles the class given, removes it if it exists, or adds it if it doesn’t exist, on the elm provided, with an optional callback called after the operation has completed
+ * toggles the class given, removes it if it exists, or adds it if it doesn’t exist,
+ * on the elm provided, with an optional callback called after the operation has completed
  *
- * @public
  * @param {HTMLElement} elm
  * @param {string} class_name
- * @param {Function|undefined} callback
+ * @param {Function|undefined} [callback]
  */
-function toggleClass( elm, class_name, callback ) {
+module.exports = function toggleClass( elm, class_name, callback ) {
   // validations
   if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
     console.warn( 'toggleClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
@@ -40,6 +39,4 @@ function toggleClass( elm, class_name, callback ) {
   } else {
     addClass( elm, class_name, callback );
   }
-}
-
-module.exports = toggleClass;
+};

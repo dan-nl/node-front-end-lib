@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var elm_original;
 var hasClass;
@@ -15,12 +14,14 @@ hasClass = require( './has-class' );
 /**
  * finds an html element ancestor, of the elm provided, that has the class name given
  *
- * @public
  * @param {HTMLElement} elm
+ * @param {HTMLElement} elm.parentElement
+ * @param {HTMLElement} elm.parentNode
+ *
  * @param {string} class_name
  * @returns {HTMLElement|undefined}
  */
-function findAncestorWithClass( elm, class_name ) {
+module.exports = function findAncestorWithClass( elm, class_name ) {
   var result;
 
   // validations
@@ -59,6 +60,4 @@ function findAncestorWithClass( elm, class_name ) {
   }
 
   return result;
-}
-
-module.exports = findAncestorWithClass;
+};

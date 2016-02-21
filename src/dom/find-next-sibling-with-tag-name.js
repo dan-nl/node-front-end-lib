@@ -2,15 +2,15 @@
 
 /**
  * module variables
- * @private
  */
 var elm_original;
 
 /**
  * finds an html element sibling, of the elm provided, that has the tag name given
  *
- * @public
  * @param {HTMLElement} elm
+ * @param {HTMLElement} elm.nextSibling
+ *
  * @param {string} tag_name
  * @returns {HTMLElement|undefined}
  */

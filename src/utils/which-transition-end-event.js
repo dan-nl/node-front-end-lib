@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * https://davidwalsh.name/css-animation-callback
+ * @see https://davidwalsh.name/css-animation-callback
  * @returns {string|undefined}
  */
 module.exports = function whichTransitionEndEvent() {

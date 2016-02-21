@@ -3,12 +3,11 @@
 /**
  * returns whether or not the given elm has the class name provided
  *
- * @public
  * @param {HTMLElement} elm
  * @param {string} class_name
  * @returns {boolean|undefined}
  */
-function hasClass( elm, class_name ) {
+module.exports = function hasClass( elm, class_name ) {
   // validations
   if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
     console.warn( 'hasClass( ' + elm + ', ' +  class_name + ' ): elm not provided as an HTMLElement' );
@@ -25,6 +24,4 @@ function hasClass( elm, class_name ) {
   }
 
   return new RegExp( '(^|\\s)' + class_name + '($|\\s)' ).test( elm.className );
-}
-
-module.exports = hasClass;
+};

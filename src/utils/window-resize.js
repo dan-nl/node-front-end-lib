@@ -39,8 +39,9 @@ function setup() {
 }
 
 /**
- * registers the callback with a universal window onresize event listener, which is called via a debounce function
- * that is set with a hard coded timeout of 400 milliseconds
+ * registers the callback with a universal window onresize event listener,
+ * which is called via a debounce function that is set with a hard coded
+ * timeout of 400 milliseconds
  *
  * @param {Function} callback
  */

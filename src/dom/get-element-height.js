@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var getBoundingClientRect;
 
@@ -14,11 +13,10 @@ getBoundingClientRect = require( './get-bounding-client-rect' );
 /**
  * returns the height, in pixels, of the elm provided. remember to add the string 'px' to the value returned when using it in a `elm.style.x =` statement
  *
- * @public
  * @param {HTMLElement} elm
  * @returns {number|undefined}
  */
-function getElementHeight( elm ) {
+module.exports = function getElementHeight( elm ) {
   var bounding_client_rect;
 
   // validations
@@ -36,6 +34,4 @@ function getElementHeight( elm ) {
       elm.scrollHeight
     )
   );
-}
-
-module.exports = getElementHeight;
+};

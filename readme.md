@@ -129,7 +129,7 @@ returns the height, in pixels, of the elm provided. remember to add the string '
 returns an html element, or collection of elements, that match the given name
 ```javascript
 @param {string} name
-@param {boolean} [return_collection = false ]
+@param {boolean} [return_collection = false]
 @returns {HTMLElement|HTMLCollection|undefined}
 ```
 

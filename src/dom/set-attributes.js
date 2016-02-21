@@ -22,6 +22,12 @@ module.exports = function setAttributes( elm, attributes ) {
 
   for ( i = 0; i < attributes.length; i += 1 ) {
     attribute = attributes[ i ];
+
+    if ( typeof attribute.key !== 'string' ) {
+      console.warn( 'setAttributes( ' + elm + ', ' + attributes + ' ): attribute key not provided as a string' );
+      continue;
+    }
+
     elm.setAttribute( attribute.key, attribute.value );
   }
 };

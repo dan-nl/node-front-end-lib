@@ -24,7 +24,7 @@ module.exports = function addElement( tag_name, attributes ) {
   var elm;
 
   if ( typeof tag_name !== 'string' ) {
-    console.warn( 'addElement( ' + tag_name + ', ' + attributes + ' ): tag_name not provided as a string' );
+    console.warn( 'addElement( ' + tag_name + ', ' + attributes + ' ): tag name not provided as a string' );
     return;
   }
 

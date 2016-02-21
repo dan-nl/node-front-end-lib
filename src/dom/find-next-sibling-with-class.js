@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var elm_original;
 var hasClass;
@@ -15,12 +14,13 @@ hasClass = require( './has-class' );
 /**
  * finds an html element sibling, of the elm provided, that has the class name given
  *
- * @public
  * @param {HTMLElement} elm
+ * @param {HTMLElement} elm.nextSibling
+ *
  * @param {string} class_name
  * @returns {HTMLElement|undefined}
  */
-function findNextSiblingWithClass( elm, class_name ) {
+module.exports = function findNextSiblingWithClass( elm, class_name ) {
   var result;
 
   // validations
@@ -52,6 +52,4 @@ function findNextSiblingWithClass( elm, class_name ) {
   }
 
   return result;
-}
-
-module.exports = findNextSiblingWithClass;
+};

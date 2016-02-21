@@ -2,19 +2,20 @@
 
 /**
  * module variables
- * @private
  */
 var elm_original;
 
 /**
  * finds an html element ancestor, of the elm provided, that has the tag name given
  *
- * @public
  * @param {HTMLElement} elm
+ * @param {HTMLElement} elm.parentElement
+ * @param {HTMLElement} elm.parentNode
+ *
  * @param {string} tag_name
  * @returns {HTMLElement|undefined}
  */
-function findAncestorWithTagName( elm, tag_name ) {
+module.exports = function findAncestorWithTagName( elm, tag_name ) {
   var result;
 
   // validations
@@ -53,6 +54,4 @@ function findAncestorWithTagName( elm, tag_name ) {
   }
 
   return result;
-}
-
-module.exports = findAncestorWithTagName;
+};

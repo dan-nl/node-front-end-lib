@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var hasClass;
 
@@ -19,7 +18,7 @@ hasClass = require( './has-class' );
  * @param {string|Array} class_name
  * @param {Function} [callback]
  */
-function addClass( elm, class_name, callback ) {
+module.exports = function addClass( elm, class_name, callback ) {
   var i;
   var added;
 
@@ -67,6 +66,4 @@ function addClass( elm, class_name, callback ) {
   if ( callback && callback instanceof Function ) {
     callback();
   }
-}
-
-module.exports = addClass;
+};

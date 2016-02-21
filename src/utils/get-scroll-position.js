@@ -3,10 +3,9 @@
 /**
  * returns the viewport’s current scroll position
  *
- * @public
  * @returns {{x: number, y: number}}
  */
-function getScrollPosition() {
+module.exports = function getScrollPosition() {
   var position = {
     x: 0,
     y: 0
@@ -24,6 +23,4 @@ function getScrollPosition() {
   }
 
   return position;
-}
-
-module.exports = getScrollPosition;
+};

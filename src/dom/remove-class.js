@@ -3,12 +3,11 @@
 /**
  * removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
  *
- * @public
  * @param {HTMLElement} elm
  * @param {string|Array} class_name
- * @param {Function|undefined} callback
+ * @param {Function|undefined} [callback]
  */
-function removeClass( elm, class_name, callback ) {
+module.exports = function removeClass( elm, class_name, callback ) {
   var i;
   var removed;
 
@@ -47,6 +46,4 @@ function removeClass( elm, class_name, callback ) {
   if ( callback && callback instanceof Function ) {
     callback();
   }
-}
-
-module.exports = removeClass;
+};

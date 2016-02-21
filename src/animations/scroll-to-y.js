@@ -2,7 +2,6 @@
 
 /**
  * module variables
- * @private
  */
 var getScrollPosition;
 
@@ -12,7 +11,6 @@ var getScrollPosition;
 getScrollPosition = require( '../utils/get-scroll-position' );
 
 /**
- * @private
  * @param {Object} elm
  */
 function fallbackScrollIntoView( elm ) {
@@ -26,13 +24,12 @@ function fallbackScrollIntoView( elm ) {
 /**
  * scrolls the browser viewport vertically to the elm provided
  *
- * @public
  * @param {HTMLElement} elm
  * @param {number} [duration]
  * @param {number} [offset]
  * @param {Function} [callback]
  */
-function scrollToY( elm, duration, offset, callback ) {
+module.exports = function scrollToY( elm, duration, offset, callback ) {
   var count;
   var diff_from_current_y;
   var next_position;
@@ -133,6 +130,4 @@ function scrollToY( elm, duration, offset, callback ) {
     },
     scroll_interval_duration
   );
-}
-
-module.exports = scrollToY;
+};

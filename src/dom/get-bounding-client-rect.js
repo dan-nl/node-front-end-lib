@@ -3,11 +3,10 @@
 /**
  * returns the ClientRect of the elm provided
  *
- * @public
  * @param {HTMLElement} elm
  * @returns {ClientRect|undefined}
  */
-function getBoundingClientRect( elm ) {
+module.exports = function getBoundingClientRect( elm ) {
   var clone;
   var result;
 
@@ -29,6 +28,4 @@ function getBoundingClientRect( elm ) {
   document.body.removeChild( clone );
 
   return result;
-}
-
-module.exports = getBoundingClientRect;
+};

@@ -1,7 +1,7 @@
 {
   "name": "node-front-end-lib",
-  "version": "1.7.0",
-  "description": "front-end js library",
+  "version": "1.7.1",
+  "description": "a simple front-end js library",
   "main": "index.js",
   "scripts": {
     "jshint": "jshint .",

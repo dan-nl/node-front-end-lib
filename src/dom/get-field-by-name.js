@@ -3,12 +3,11 @@
 /**
  * returns an html element, or collection of elements, that match the given name
  *
- * @public
  * @param {string} name
  * @param {boolean} [return_collection = false ]
  * @returns {HTMLElement|HTMLCollection|undefined}
  */
-function getFieldByName( name, return_collection ) {
+module.exports = function getFieldByName( name, return_collection ) {
   var fields;
 
   if ( typeof name !== 'string' ) {
@@ -32,6 +31,4 @@ function getFieldByName( name, return_collection ) {
   }
 
   return fields;
-}
-
-module.exports = getFieldByName;
+};

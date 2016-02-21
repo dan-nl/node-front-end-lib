@@ -47,6 +47,11 @@ function handleKeydown( evt ) {
   }
 }
 
+/**
+ * prevents the backspace key from triggering a history back call to the browser.
+ * allows the backspace key to be used in form input fields - uses the tag type
+ * to determine which tag types are allowed
+ */
 module.exports = function preventBackspace() {
   document.addEventListener( 'keydown', handleKeydown );
 };
