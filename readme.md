@@ -1,5 +1,5 @@
 # node-front-end-lib
-front-end js library
+a simple front-end js library
 
 ## ajax
 ### ajax.get( url, options )
