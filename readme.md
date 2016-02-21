@@ -56,6 +56,14 @@ adds the class, or classes, given, to the elm provided, with an optional callbac
 @param {Function} [callback]
 ```
 
+### createElement( tag_name, attributes )
+creates a dom element based on the tag_name provided. will also set attributes for the element if an array of attribute objects is provided. an attribute object is expected to contain a key and a value representing the attribute.
+```javascript
+@param {string} tag_name
+@param {Array} attributes
+@returns {HTMLElement|undefined}
+```
+
 ### findAncestorWithClass( elm, class_name )
 finds an html element ancestor, of the elm provided, that has the class name given
 ```javascript
@@ -139,6 +147,14 @@ removes the class, or classes, given, from the elm provided, with an optional ca
 @param {HTMLElement} elm
 @param {string|Array} class_name
 @param {Function} [callback]
+```
+
+### setAttributes( elm, attributes )
+will set attributes for the element if an array of attribute objects is provided. an attribute object is expected to contain a key and a value representing the attribute.
+```javascript
+@param {string} tag_name
+@param {Array} attributes
+@returns {HTMLElement|undefined}
 ```
 
 ### toggleClass( elm, class_name, callback )

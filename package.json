@@ -1,10 +1,10 @@
 {
   "name": "node-front-end-lib",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "front-end js library",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint .",
+    "jshint": "jshint .",
     "test": "jasmine-node ./spec/"
   },
   "keywords": [],

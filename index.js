@@ -22,6 +22,7 @@ lib.windowResize = require( './src/utils/window-resize' );
 
 // dom
 lib.addClass = require( './src/dom/add-class' );
+lib.createElement = require( './src/dom/create-element' );
 lib.findAncestorWithClass = require( './src/dom/find-ancestor-with-class' );
 lib.findAncestorWithTagName = require( './src/dom/find-ancestor-with-tag-name' );
 lib.findNextSiblingWithClass = require( './src/dom/find-next-sibling-with-class' );
@@ -33,6 +34,7 @@ lib.getElementHeight = require( './src/dom/get-element-height' );
 lib.getFieldByName = require( './src/dom/get-field-by-name' );
 lib.hasClass = require( './src/dom/has-class' );
 lib.removeClass = require( './src/dom/remove-class' );
+lib.setAttributes = require( './src/dom/set-attributes' );
 lib.toggleClass = require( './src/dom/toggle-class' );
 
 // ajax
