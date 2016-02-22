@@ -1,32 +1,38 @@
 'use strict';
 
 /**
- * using setInterval(), checks for the presence of an object
+ * using setInterval(), checks for the presence of an object on the window global object
  *
  * the initial use case is when an external script has been lazy loaded and you want to
  * make sure its main object is available before using it
  *
- * @param {Object} obj
+ * @param {string} object_name
  * @param {Function} [callback]
  * @param {number} [interval_delay]
  * @param {number} [interval_max]
  */
-module.exports = function checkForObject( obj, callback, interval_delay, interval_max ) {
+module.exports = function checkForObject( object_name, callback, interval_delay, interval_max ) {
   var interval;
   var interval_count;
 
+  if ( typeof object_name !== 'string' ) {
+    console.warn( 'checkForObject( ' + object_name + ',' + callback + ', ' + interval_delay + ', ' + interval_max + ' ): object name not provided as string' );
+    return;
+  }
+
+  interval_count = 0;
   interval_delay = interval_delay || 10;
   interval_max = interval_max || 100;
 
   interval = setInterval(
-    function () {
+    function checkForObjectSetInterval() {
       if ( interval_count > interval_max ) {
-        console.warn( 'checkForObject( ' + obj + ',' + callback + ', ' + interval_delay + ', ' + interval_max + ' ): object not present' );
+        console.warn( 'checkForObject( ' + object_name + ',' + callback + ', ' + interval_delay + ', ' + interval_max + ' ): object not present' );
         clearInterval( interval );
         return;
       }
 
-      if ( !obj ) {
+      if ( !window[object_name] ) {
         interval_count += 1;
         return;
       }
