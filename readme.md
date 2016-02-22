@@ -166,6 +166,15 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 
 ## utils
+### checkForObject( obj, callback, interval_delay, interval_max )
+using setInterval(), checks for the presence of an object. the initial use case is when an external script has been lazy loaded and you want to make sure its main object is available before using it.
+``` javascript
+@param {Object} obj
+@param {Function} [callback]
+@param {number} [interval_delay]
+@param {number} [interval_max]
+```
+
 ### debounce( func, wait, immediate )
 @see [https://davidwalsh.name/javascript-debounce-function](https://davidwalsh.name/javascript-debounce-function)
 

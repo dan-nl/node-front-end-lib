@@ -11,6 +11,7 @@ var lib;
 lib = {};
 
 // utils
+lib.checkForObject = require( './src/utils/check-for-object' );
 lib.debounce = require( './src/utils/debounce' );
 lib.getScrollPosition = require( './src/utils/get-scroll-position' );
 lib.objectPropertyExists = require( './src/utils/object-property-exists' );
