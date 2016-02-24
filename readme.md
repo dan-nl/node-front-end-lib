@@ -166,13 +166,13 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 
 ## utils
-### checkForObject( obj, callback, interval_delay, interval_max )
-using setInterval(), checks for the presence of an object on the window global object. the initial use case is when an external script has been lazy loaded and you want to make sure its main object is available before using it.
+### checkConditionOnInterval( condition, interval_delay, interval_max )
+using setInterval(), checks for the given condition, which should be a function that returns a truthy or falsy result.
 ``` javascript
-@param {string} object_name
-@param {Function} [callback]
+@param {Function} condition
 @param {number} [interval_delay]
 @param {number} [interval_max]
+@returns {Promise}
 ```
 
 ### debounce( func, wait, immediate )

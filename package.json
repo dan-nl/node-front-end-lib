@@ -1,6 +1,6 @@
 {
   "name": "node-front-end-lib",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "description": "a simple front-end js library",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,6 @@
     "jshint": "^2.8.0"
   },
   "dependencies": {
-    "bluebird": "^3.0.6"
+    "bluebird": "^3.3.1"
   }
 }
