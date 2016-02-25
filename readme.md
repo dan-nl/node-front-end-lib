@@ -239,3 +239,10 @@ registers the callback with a universal window onresize event listener, which is
 ```javascript
 @param {Function} callback
 ```
+
+## web apis
+### getGeolocation()
+resolves with an object { lat: {number}, lon: {number} } or false if geolocation cannot be determined
+```javascript
+@returns {Promise}
+```

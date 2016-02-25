@@ -45,4 +45,7 @@ lib.extractXhrResponse = require( './src/ajax/extract-xhr-response' );
 // animations
 lib.scrollToY = require( './src/animations/scroll-to-y' );
 
+// web apis
+lib.getGeolocation = require( './src/web-apis/get-geolocation' );
+
 module.exports = lib;
