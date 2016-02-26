@@ -222,6 +222,12 @@ prevents the backspace key from triggering a history back call to the browser. a
 * textarea
 * url
 
+### touchEventsExist()
+determine whether or not the browsing environment supports touch events
+```javascript
+@returns {boolean}
+```
+
 ### validateEnvironment()
 returns whether or not the front-end environment meets the validations in the method.
 ```javascript
