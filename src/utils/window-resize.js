@@ -3,34 +3,32 @@
 /**
  * module variables
  */
+var addCallback;
 var callbacks;
+var callCallbacks;
 var debounce;
 var listener_added;
 
 /**
  * variable assignments
  */
+addCallback = require( './add-callback' );
+callCallbacks = require( './call-callbacks' );
 debounce = require( './debounce' );
 
-function callCallbacks() {
-  var i;
-
-  for ( i = 0; i < callbacks.length; i += 1 ) {
-    callbacks[ i ]();
-  }
+function debounceFunction() {
+  callCallbacks( callbacks );
 }
 
-function setup() {
+function addListener() {
   if ( listener_added ) {
     return;
   }
 
-  callbacks = [];
-
   window.addEventListener(
     'resize',
     debounce(
-      callCallbacks,
+      debounceFunction,
       400
     )
   );
@@ -46,6 +44,13 @@ function setup() {
  * @param {Function} callback
  */
 module.exports = function windowResize( callback ) {
-  setup();
-  callbacks.push( callback );
+  if ( !callbacks ) {
+    callbacks = [];
+  }
+
+  if ( !addCallback( callback, callbacks ) ) {
+    return;
+  }
+
+  addListener();
 };

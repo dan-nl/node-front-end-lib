@@ -166,6 +166,19 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 
 ## utils
+### addCallback( callback, callbacks )
+adds a callback to a given array of callbacks. ensures that the callback is a function and that the callbacks are an array.
+``` javascript
+@param {Function} callback
+@param {Array} callbacks
+```
+
+### callCallbacks( callbacks )
+given an array of callbacks, calls each one using the apply method, passing in any arguments provided less the initial array of callbacks
+``` javascript
+@param {Array} callbacks
+```
+
 ### checkConditionOnInterval( condition, interval_delay, interval_max )
 using setInterval(), checks for the given condition, which should be a function that returns a truthy or falsy result.
 ``` javascript
