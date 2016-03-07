@@ -36,6 +36,7 @@ lib.findPreviousSiblingWithTagName = require( './src/dom/find-previous-sibling-w
 lib.getBoundingClientRect = require( './src/dom/get-bounding-client-rect' );
 lib.getElementHeight = require( './src/dom/get-element-height' );
 lib.getFieldByName = require( './src/dom/get-field-by-name' );
+lib.getFieldByTagName = require( './src/dom/get-field-by-tag-name' );
 lib.hasClass = require( './src/dom/has-class' );
 lib.removeClass = require( './src/dom/remove-class' );
 lib.setAttributes = require( './src/dom/set-attributes' );

@@ -4,7 +4,7 @@
  * returns an html element, or collection of elements, that match the given name
  *
  * @param {string} name
- * @param {boolean} [return_collection = false ]
+ * @param {boolean} [return_collection = false]
  * @returns {HTMLElement|HTMLCollection|undefined}
  */
 module.exports = function getFieldByName( name, return_collection ) {

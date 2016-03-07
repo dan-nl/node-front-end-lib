@@ -133,6 +133,14 @@ returns an html element, or collection of elements, that match the given name
 @returns {HTMLElement|HTMLCollection|undefined}
 ```
 
+### getFieldByTagName( tag_name )
+returns an html element, or collection of elements, that match the given tag name
+```javascript
+@param {string} tag_name
+@param {boolean} [return_collection = false]
+@returns {HTMLElement|HTMLCollection|undefined}
+```
+
 ### hasClass( elm, class_name )
 returns whether or not the given elm has the class name provided
 ```javascript
