@@ -12,8 +12,8 @@ module.exports = function triggerEvent( event, elm ) {
     return;
   }
 
-  if ( elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
-    console.warn( 'triggerEvent( ' + event + ', ' + elm + ' ) elm not provided as an HTMLElement' );
+  if ( elm.constructor.toString().indexOf( 'HTML' ) === -1 && elm.constructor.toString().indexOf( 'Window' ) === -1 ) {
+    console.warn( 'triggerEvent( ' + event + ', ' + elm + ' ) elm not provided as an HTMLElement or Window' );
     return;
   }
 
