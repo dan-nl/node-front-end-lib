@@ -25,7 +25,7 @@ module.exports = function findAncestorWithClass( elm, class_name ) {
   var result;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.warn( 'findAncestorWithClass( ' + elm + ', ' + class_name + ' ): elm not provided as a valid object' );
     return;
   }

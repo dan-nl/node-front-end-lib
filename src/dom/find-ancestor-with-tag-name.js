@@ -19,7 +19,7 @@ module.exports = function findAncestorWithTagName( elm, tag_name ) {
   var result;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.error( 'findAncestorWithTagName( ' + elm + ', ' + tag_name + ' ): elm not provided as a valid object' );
     return;
   }

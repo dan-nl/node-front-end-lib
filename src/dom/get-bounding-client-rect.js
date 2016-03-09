@@ -11,7 +11,7 @@ module.exports = function getBoundingClientRect( elm ) {
   var result;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.warn( 'getBoundingClientRect( ' + elm + ' ): elm not provided as an HTMLElement' );
     return;
   }

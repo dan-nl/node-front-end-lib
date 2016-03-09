@@ -9,7 +9,7 @@
  */
 module.exports = function hasClass( elm, class_name ) {
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.warn( 'hasClass( ' + elm + ', ' +  class_name + ' ): elm not provided as an HTMLElement' );
     return;
   }

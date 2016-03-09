@@ -42,7 +42,7 @@ module.exports = function scrollToY( elm, duration, offset, callback ) {
   var start;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.warn( 'scrollToY( ' + elm + ', ' + duration + ', ' + callback + ' ): elm not provided as an HTMLElement' );
     return;
   }

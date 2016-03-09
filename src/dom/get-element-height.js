@@ -20,7 +20,7 @@ module.exports = function getElementHeight( elm ) {
   var bounding_client_rect;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
+  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
     console.warn( 'getElementHeight( ' + elm + ' ): elm not provided as an HTMLElement' );
     return;
   }
