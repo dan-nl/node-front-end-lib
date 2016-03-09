@@ -10,12 +10,12 @@
 module.exports = function triggerEvent( event_name, event_type, elm ) {
   var evt;
 
-  if ( typeof event !== 'string' ) {
+  if ( typeof event_name !== 'string' ) {
     console.warn( 'triggerEvent( ' + event_name + ', ' + event_type + ', ' + elm + ' ) event_name not provided as a string' );
     return;
   }
 
-  if ( typeof event !== 'string' ) {
+  if ( typeof event_type !== 'string' ) {
     console.warn( 'triggerEvent( ' + event_name + ', ' + event_type + ', ' + elm + ' ) event_type not provided as a string' );
     return;
   }
