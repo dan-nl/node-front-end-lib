@@ -249,9 +249,10 @@ determine whether or not the browsing environment supports touch events
 @returns {boolean}
 ```
 
-### triggerEvent( event, elm )
+### triggerEvent( event_name, event_type, elm )
 ```javascript
-@param {string} event
+@param {string} event_name
+@param {string} event_type
 @param {HTMLElement} elm
 ```
 
