@@ -249,6 +249,12 @@ determine whether or not the browsing environment supports touch events
 @returns {boolean}
 ```
 
+### triggerEvent( event, elm )
+```javascript
+@param {string} event
+@param {HTMLElement} elm
+```
+
 ### validateEnvironment()
 returns whether or not the front-end environment meets the validations in the method.
 ```javascript
