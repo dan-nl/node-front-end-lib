@@ -172,6 +172,8 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 @param {string|Array} class_name
 @param {Function} [callback]
 ```
+## polyfills
+### addCustomEvent()
 
 ## utils
 ### addCallback( callback, callbacks )

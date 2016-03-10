@@ -50,6 +50,9 @@ lib.extractXhrResponse = require( './src/ajax/extract-xhr-response' );
 // animations
 lib.scrollToY = require( './src/animations/scroll-to-y' );
 
+// polyfills
+lib.addCustomEvent = require( './src/polyfills/add-custom-event' );
+
 // web apis
 lib.getGeolocation = require( './src/web-apis/get-geolocation' );
 
