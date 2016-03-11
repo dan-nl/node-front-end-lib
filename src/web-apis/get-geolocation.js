@@ -11,7 +11,7 @@ var Promise;
  * variable assignments
  */
 check_geolocation_count = 0;
-check_geolocation_limit = 100; // assuming getCurrentPosition timeout is 3ms
+check_geolocation_limit = 10; // assuming getCurrentPosition timeout is 3ms
 Promise = require( 'bluebird' );
 
 /**
