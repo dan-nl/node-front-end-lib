@@ -52,6 +52,7 @@ lib.scrollToY = require( './src/animations/scroll-to-y' );
 
 // polyfills
 lib.addCustomEvent = require( './src/polyfills/add-custom-event' );
+lib.getWindowLocationOrigin = require( './src/polyfills/window-location-origin' );
 
 // web apis
 lib.getGeolocation = require( './src/web-apis/get-geolocation' );

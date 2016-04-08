@@ -174,6 +174,7 @@ toggles the class given, removes it if it exists, or adds it if it doesn’t exi
 ```
 ## polyfills
 ### addCustomEvent()
+### getWindowLocationOrigin()
 
 ## utils
 ### addCallback( callback, callbacks )
