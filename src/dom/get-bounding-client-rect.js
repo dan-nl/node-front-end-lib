@@ -19,7 +19,6 @@ module.exports = function getBoundingClientRect( elm ) {
   clone = elm.cloneNode( true );
 
   document.body.appendChild( clone );
-  clone.className = '';
   clone.style.position = 'absolute';
   clone.style.top = '-9999px';
   clone.style.display = 'block';
