@@ -246,6 +246,14 @@ prevents the backspace key from triggering a history back call to the browser. a
 * textarea
 * url
 
+### serializeForIe( container )
+used to serialize form controls for browsers that do not support form.elements
+* can be used, for example, in combination with form-serialize; when form-serialize returns an empty result, use this method to serialize the form elements
+```javascript
+@param {HTMLFormElement} container
+@returns {string}
+```
+
 ### touchEventsExist()
 determine whether or not the browsing environment supports touch events
 ```javascript
