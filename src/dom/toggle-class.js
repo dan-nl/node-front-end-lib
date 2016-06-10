@@ -24,11 +24,6 @@ removeClass = require( './remove-class' );
  */
 module.exports = function toggleClass( elm, class_name, callback ) {
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
-    console.warn( 'toggleClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
-    return;
-  }
-
   if ( typeof class_name !== 'string' && !( class_name instanceof Array ) ) {
     console.warn( 'toggleClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): class name not provided as a string or Array' );
     return;

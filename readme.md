@@ -51,7 +51,7 @@ scrolls the browser viewport vertically to the elm provided
 ### addClass( elm, class_name, callback )
 adds the class, or classes, given, to the elm provided, with an optional callback called after the operation has completed
 ```javascript
-@param {HTMLElement} elm
+@param {Element} elm
 @param {string|Array} class_name
 @param {Function} [callback]
 ```
@@ -144,7 +144,7 @@ returns an html element, or collection of elements, that match the given tag nam
 ### hasClass( elm, class_name )
 returns whether or not the given elm has the class name provided
 ```javascript
-@param {HTMLElement} elm
+@param {Element} elm
 @param {string} class_name
 @returns {boolean|undefined}
 ```
@@ -152,7 +152,7 @@ returns whether or not the given elm has the class name provided
 ### removeClass( elm, class_name, callback )
 removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
 ```javascript
-@param {HTMLElement} elm
+@param {Element} elm
 @param {string|Array} class_name
 @param {Function} [callback]
 ```

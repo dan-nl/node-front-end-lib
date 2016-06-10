@@ -3,7 +3,7 @@
 /**
  * removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
  *
- * @param {HTMLElement} elm
+ * @param {Element} elm
  * @param {string|Array} class_name
  * @param {Function|undefined} [callback]
  */
@@ -12,11 +12,6 @@ module.exports = function removeClass( elm, class_name, callback ) {
   var removed;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) === -1 ) {
-    console.warn( 'removeClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
-    return;
-  }
-
   if ( typeof class_name !== 'string' && !( class_name instanceof Array ) ) {
     console.warn( 'removeClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): class name not provided as a string or Array' );
     return;

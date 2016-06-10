@@ -14,7 +14,7 @@ hasClass = require( './has-class' );
  * adds the class, or classes, given, to the elm provided, with an optional callback called after the operation has completed
  *
  * @public
- * @param {HTMLElement} elm
+ * @param {Element} elm
  * @param {string|Array} class_name
  * @param {Function} [callback]
  */
@@ -23,11 +23,6 @@ module.exports = function addClass( elm, class_name, callback ) {
   var added;
 
   // validations
-  if ( !elm || elm.constructor.toString().indexOf( 'HTML' ) < 0 ) {
-    console.warn( 'addClass( ' + elm + ', ' + class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
-    return;
-  }
-
   if ( typeof class_name !== 'string' && !( class_name instanceof Array ) ) {
     console.warn( 'addClass( ' + elm + ', ' + class_name + ', ' + callback + ' ): class name not provided as a string or Array' );
     return;
