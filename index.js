@@ -12,6 +12,7 @@ lib = {};
 
 // utils
 lib.addCallback = require( './src/utils/add-callback' );
+lib.bindEventData = require( './src/utils/bind-event-data' );
 lib.callCallbacks = require( './src/utils/call-callbacks' );
 lib.checkConditionOnInterval = require( './src/utils/check-condition-on-interval' );
 lib.debounce = require( './src/utils/debounce' );
