@@ -184,6 +184,14 @@ adds a callback to a given array of callbacks. ensures that the callback is a fu
 @param {Array} callbacks
 ```
 
+bindEventData( elm, type, fn, event_data )
+``` javascript
+@param {HTMLElement} elm
+@param {string} type
+@param {Function} fn
+@param {Object}
+```
+
 ### callCallbacks( callbacks )
 given an array of callbacks, calls each one using the apply method, passing in any arguments provided less the initial array of callbacks
 ``` javascript
