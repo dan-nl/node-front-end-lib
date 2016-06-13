@@ -184,10 +184,10 @@ adds a callback to a given array of callbacks. ensures that the callback is a fu
 @param {Array} callbacks
 ```
 
-bindEventData( elm, type, fn, event_data )
+bindEventDataToEvent( elm, event_name, fn, event_data )
 ``` javascript
 @param {HTMLElement} elm
-@param {string} type
+@param {string} event_name
 @param {Function} fn
 @param {Object}
 ```

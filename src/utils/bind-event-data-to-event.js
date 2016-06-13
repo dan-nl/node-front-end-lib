@@ -2,15 +2,16 @@
 
 /**
  * @param {HTMLElement} elm
- * @param {string} type
+ * @param {string} event_name
  * @param {Function} fn
  * @param {Object} event_data
- */module.exports = function bindEventData( elm, type, fn, event_data ) {
+ */module.exports = function bindEventDataToEvent( elm, event_name, fn, event_data ) {
   elm.addEventListener(
-    type,
+    event_name,
     function bindEventData( evt ) {
       /*jshint validthis:true */
-      fn.call( this, evt, event_data );
+      evt.event_data = event_data;
+      fn.call( this, evt );
     }
   );
 };
