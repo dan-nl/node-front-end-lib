@@ -254,11 +254,14 @@ prevents the backspace key from triggering a history back call to the browser. a
 * textarea
 * url
 
-### serializeForIe( container )
+### serializeForIe( container, options )
 used to serialize form controls for browsers that do not support form.elements
 * can be used, for example, in combination with form-serialize; when form-serialize returns an empty result, use this method to serialize the form elements
+* options.hidden_with_value = true will only pass hidden fields that contain a value.length > 0
 ```javascript
 @param {HTMLFormElement} container
+@param {Object} [options]
+@param {boolean} [options.hidden_with_value]
 @returns {string}
 ```
 

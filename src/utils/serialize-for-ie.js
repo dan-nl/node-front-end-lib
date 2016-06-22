@@ -10,13 +10,13 @@ function processSelects( selects, result ) {
   var select;
 
   for ( i = 0; i < selects.length; i += 1 ) {
-    select = selects[i];
+    select = selects[ i ];
 
     if ( result.length > 0 ) {
       result += '&';
     }
 
-    result += select.name + '=' + encodeURIComponent( select.options[select.selectedIndex].value );
+    result += select.name + '=' + encodeURIComponent( select.options[ select.selectedIndex ].value );
   }
 
   return result;
@@ -24,15 +24,20 @@ function processSelects( selects, result ) {
 
 /**
  * @param {HTMLCollection} fields
+ *
  * @param {string} result
+ *
+ * @param {Object} options
+ * @param {boolean} options.hidden_with_value
+ *
  * @returns {string}
  */
-function processFields( fields, result ) {
+function processFields( fields, result, options ) {
   var i;
   var field;
 
   for ( i = 0; i < fields.length; i += 1 ) {
-    field = fields[i];
+    field = fields[ i ];
 
     if ( field.type === 'radio' || field.type === 'checkbox' ) {
       if ( field.checked ) {
@@ -43,6 +48,12 @@ function processFields( fields, result ) {
         result += field.name + '=' + encodeURIComponent( field.value );
       }
     } else {
+      if ( field.type === 'hidden' && options.hidden_with_value ) {
+        if ( field.value.length < 1 ) {
+          continue;
+        }
+      }
+
       if ( result.length > 0 ) {
         result += '&';
       }
@@ -61,9 +72,10 @@ function processFields( fields, result ) {
  *   returns an empty result, use this method to serialize the form elements
  *
  * @param {HTMLFormElement} container
+ * @param {Object} options
  * @returns {string}
  */
-module.exports = function serializeForIe( container ) {
+module.exports = function serializeForIe( container, options ) {
   var inputs;
   var result;
   var selects;
@@ -75,7 +87,11 @@ module.exports = function serializeForIe( container ) {
   selects = container.getElementsByTagName( 'select' );
   textareas = container.getElementsByTagName( 'textarea' );
 
-  result = processFields( inputs, result );
+  if ( !( options instanceof Object ) ) {
+    options = {};
+  }
+
+  result = processFields( inputs, result, options );
   result = processSelects( selects, result );
   result = processFields( textareas, result );
 
