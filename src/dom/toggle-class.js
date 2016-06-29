@@ -23,9 +23,20 @@ removeClass = require( './remove-class' );
  * @param {Function|undefined} [callback]
  */
 module.exports = function toggleClass( elm, class_name, callback ) {
+  var error;
+
   // validations
+  if ( !elm || ( elm.constructor.toString().indexOf( 'HTML' ) === -1 && elm.constructor.toString().indexOf( 'SVG' ) === -1 ) ) {
+    console.warn( 'toggleClass( ' + elm + ', ' + class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
+    error = new Error( 'stack trace' );
+    console.warn( error.stack );
+    return;
+  }
+
   if ( typeof class_name !== 'string' && !( class_name instanceof Array ) ) {
     console.warn( 'toggleClass( ' + elm + ', ' +  class_name + ', ' + callback + ' ): class name not provided as a string or Array' );
+    error = new Error( 'stack trace' );
+    console.warn( error.stack );
     return;
   }
 
