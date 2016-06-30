@@ -42,7 +42,7 @@ module.exports = function findNextSiblingWithClass( elm, class_name ) {
     while ( ( elm = elm.nextSibling ) && !hasClass( elm, class_name ) ) {}
   }
 
-  if ( hasClass( elm, class_name ) ) {
+  if ( elm && hasClass( elm, class_name ) ) {
     result = elm;
   }
 

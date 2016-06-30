@@ -50,7 +50,7 @@ module.exports = function findAncestorWithClass( elm, class_name ) {
     }
   }
 
-  if ( hasClass( elm, class_name ) ) {
+  if ( elm && hasClass( elm, class_name ) ) {
     result = elm;
   }
 
