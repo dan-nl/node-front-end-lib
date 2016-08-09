@@ -41,7 +41,7 @@ module.exports = function removeClass( elm, class_name, callback ) {
   }
 
   // remove class via className
-  if ( !removed ) {
+  if ( !removed && elm && elm.className && typeof elm.className.replace === 'function' ) {
     elm.className =
       elm.className.replace( new RegExp( '(^|\\s)' + class_name + '($|\\s)' ), ' ' )
         .replace( /^\s+|\s+$/g, '' );
