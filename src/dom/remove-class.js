@@ -1,6 +1,16 @@
 'use strict';
 
 /**
+ * module variables
+ */
+var removeClassFallback;
+
+/**
+ * variable assignments
+ */
+removeClassFallback = require( './class-fallback' );
+
+/**
  * removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
  *
  * @param {Element} elm
@@ -10,7 +20,6 @@
 module.exports = function removeClass( elm, class_name, callback ) {
   var error;
   var i;
-  var removed;
 
   // validations
   if ( !elm || ( elm.constructor.toString().indexOf( 'HTML' ) === -1 && elm.constructor.toString().indexOf( 'SVG' ) === -1 ) ) {
@@ -34,17 +43,12 @@ module.exports = function removeClass( elm, class_name, callback ) {
     }
   }
 
-  // remove class via classList
-  if ( !removed && elm.classList ) {
+  if ( elm.classList ) {
+    // remove class via classList
     elm.classList.remove( class_name );
-    removed = true;
-  }
-
-  // remove class via className
-  if ( !removed && elm && elm.className && typeof elm.className.replace === 'function' ) {
-    elm.className =
-      elm.className.replace( new RegExp( '(^|\\s)' + class_name + '($|\\s)' ), ' ' )
-        .replace( /^\s+|\s+$/g, '' );
+  } else if ( elm && elm.className && typeof elm.className.replace === 'function' ) {
+    // remove class via setAttribute
+    removeClassFallback( elm, class_name );
   }
 
   // callback
