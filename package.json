@@ -1,6 +1,6 @@
 {
   "name": "node-front-end-lib",
-  "version": "2.15.3",
+  "version": "2.15.4",
   "description": "a simple front-end js library",
   "main": "index.js",
   "scripts": {
