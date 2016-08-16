@@ -8,7 +8,7 @@ var removeClassFallback;
 /**
  * variable assignments
  */
-removeClassFallback = require( './class-fallback' );
+removeClassFallback = require( './class-fallback' ).removeClass;
 
 /**
  * removes the class, or classes, given, from the elm provided, with an optional callback called after the operation has completed
@@ -46,7 +46,7 @@ module.exports = function removeClass( elm, class_name, callback ) {
   if ( elm.classList ) {
     // remove class via classList
     elm.classList.remove( class_name );
-  } else if ( elm && elm.className && typeof elm.className.replace === 'function' ) {
+  } else if ( elm.setAttribute ) {
     // remove class via setAttribute
     removeClassFallback( elm, class_name );
   }
