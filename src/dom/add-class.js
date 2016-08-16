@@ -4,11 +4,13 @@
  * module variables
  */
 var hasClass;
+var addClassFallback;
 
 /**
  * variable assignments
  */
 hasClass = require( './has-class' );
+addClassFallback = require( './class-fallback' ).addClass;
 
 /**
  * adds the class, or classes, given, to the elm provided, with an optional callback called after the operation has completed
@@ -20,7 +22,6 @@ hasClass = require( './has-class' );
  */
 module.exports = function addClass( elm, class_name, callback ) {
   var i;
-  var added;
   var error;
 
   // validations
@@ -47,24 +48,26 @@ module.exports = function addClass( elm, class_name, callback ) {
     return;
   }
 
-  if ( hasClass( elm, class_name ) ) {
-    added = true;
-  }
-
-  // add class via classList
-  if ( !added && elm.classList ) {
-    elm.classList.add( class_name );
-    added = true;
-  }
-
-  // add class via className
-  if ( !added && elm.className.length > 0 ) {
-    elm.className += ' ' + class_name;
-    added = true;
-  }
-
-  if ( !added ) {
-    elm.className = class_name;
+  if ( !hasClass( elm, class_name ) ) {
+    if ( elm.classList ) {
+      // add class via classList
+      elm.classList.add( class_name );
+    } else if ( elm.setAttribute ) {
+      // add class via setAttribute
+      addClassFallback( elm, class_name );
+    } else if ( elm.className ) {
+      elm.className = class_name;
+    } else {
+      console.warn(
+        'addClass( ' +
+        elm +
+        ', ' +
+        class_name +
+        ', ' +
+        callback +
+        ' ): doesn\'t support className or classList mutation.'
+      );
+    }
   }
 
   // callback
