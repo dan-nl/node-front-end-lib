@@ -11,6 +11,15 @@ var hasClass;
 hasClass = require( './has-class' );
 
 /**
+ * @param {string} class_string
+ * @param {string} class_name
+ * @returns {string}
+ */
+function addClassString( class_string, class_name ) {
+  return ( class_string + ' ' + class_name ).trim();
+}
+
+/**
  * adds the class, or classes, given, to the elm provided, with an optional callback called after the operation has completed
  *
  * @public
@@ -19,13 +28,13 @@ hasClass = require( './has-class' );
  * @param {Function} [callback]
  */
 module.exports = function addClass( elm, class_name, callback ) {
-  var i;
   var added;
   var error;
+  var i;
 
   // validations
   if ( !elm || ( elm.constructor.toString().indexOf( 'HTML' ) === -1 && elm.constructor.toString().indexOf( 'SVG' ) === -1 ) ) {
-    console.warn( 'addClass( ' + elm + ', ' + class_name + ' ): elm not provided as an HTMLElement' );
+    console.warn( 'addClass( ' + elm + ', ' + class_name + ' ): elm not provided as an HTMLElement or an SVGElement' );
     error = new Error( 'stack trace' );
     console.warn( error.stack );
     return;
@@ -58,13 +67,14 @@ module.exports = function addClass( elm, class_name, callback ) {
   }
 
   // add class via className
-  if ( !added && elm.className.length > 0 ) {
-    elm.className += ' ' + class_name;
+  if ( !added && elm.className ) {
+    elm.className = addClassString( elm.className, class_name );
     added = true;
   }
 
-  if ( !added ) {
-    elm.className = class_name;
+  // add class via setAttribute & getAttribute
+  if ( !added && elm.setAttribute && elm.getAttribute ) {
+    elm.setAttribute( 'class', addClassString( elm.getAttribute( 'class' ), class_name ) );
   }
 
   // callback

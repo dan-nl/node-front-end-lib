@@ -27,7 +27,7 @@ module.exports = function toggleClass( elm, class_name, callback ) {
 
   // validations
   if ( !elm || ( elm.constructor.toString().indexOf( 'HTML' ) === -1 && elm.constructor.toString().indexOf( 'SVG' ) === -1 ) ) {
-    console.warn( 'toggleClass( ' + elm + ', ' + class_name + ', ' + callback + ' ): elm not provided as an HTMLElement' );
+    console.warn( 'toggleClass( ' + elm + ', ' + class_name + ', ' + callback + ' ): elm not provided as an HTMLElement or an SVGElement' );
     error = new Error( 'stack trace' );
     console.warn( error.stack );
     return;
